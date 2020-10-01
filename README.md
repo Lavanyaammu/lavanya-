@@ -1,22 +1,18 @@
-public class Main {
+
+public class Fibonacci {
 
     public static void main(String[] args) {
 
-        int num = 29;
-        boolean flag = false;
-        for(int i = 2; i <= num/2; ++i)
-        {
-            // condition for nonprime number
-            if(num % i == 0)
-            {
-                flag = true;
-                break;
-            }
-        }
+        int n = 10, t1 = 0, t2 = 1;
+        System.out.print("First " + n + " terms: ");
 
-        if (!flag)
-            System.out.println(num + " is a prime number.");
-        else
-            System.out.println(num + " is not a prime number.");
+        for (int i = 1; i <= n; ++i)
+        {
+            System.out.print(t1 + " + ");
+
+            int sum = t1 + t2;
+            t1 = t2;
+            t2 = sum;
+        }
     }
 }
